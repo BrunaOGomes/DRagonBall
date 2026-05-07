@@ -1,10 +1,9 @@
 package br.com.example.dragonballapp.presentation.dragonball.detail
 
-// Manter o package
-
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.example.dragonballapp.domain.common.Resource
+import br.com.example.dragonballapp.domain.model.Character
 import br.com.example.dragonballapp.domain.usecase.GetCharacterByIdUseCase
 import br.com.example.dragonballapp.presentation.common.UiState
 import kotlinx.coroutines.flow.MutableStateFlow

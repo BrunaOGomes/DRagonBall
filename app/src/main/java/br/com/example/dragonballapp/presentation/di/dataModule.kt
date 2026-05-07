@@ -4,15 +4,13 @@ import br.com.example.dragonballapp.data.remote.CharacterRemoteDataSource
 import br.com.example.dragonballapp.domain.repository.CharacterRepository
 import org.koin.dsl.module
 
+import br.com.example.dragonballapp.data.repository.CharacterRepositoryImpl
+
 val dataModule = module {
 
-    single<CharacterRemoteDataSource> {
-        PokemonRemoteDataSourceImpl(api = get())
-    }
 
+    // Repository
     single<CharacterRepository> {
-        PokemonRepositoryImpl(
-            remoteDataSource = get()
-        )
+        CharacterRepositoryImpl(remoteDataSource = get())
     }
 }
